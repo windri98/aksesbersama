@@ -1,0 +1,205 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2A2A2A;
+    background-image: url('/images/login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Login container */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%; 
+    padding: 1rem;
+}
+
+/* Login card */
+.login-card {
+    width: 364px; 
+    max-width: 90%; 
+    background: #322C2B;
+    border: 1px solid #E4C59E;
+    border-radius: 8px;
+    box-shadow: 0px 8px 8px rgba(23, 23, 23, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+    gap: 24px;
+}
+
+/* Logo */
+.logo-container {
+    margin-bottom: 1.5rem;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+}
+
+/* Form styles */
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.75rem;
+}
+
+.input-container .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: #E4C59E;
+}
+
+.input-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.input-container input::placeholder {
+    color: #999;
+}
+
+.input-container:focus-within {
+    border-color: #E4C59E;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    background: #E4C59E;
+    color: #171717;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #A37D4D;
+}
+
+/* ============================================= */
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-dialog {
+    background-color: #171717;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    color: #E4C59E;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.success-icon {
+    margin-bottom: 20px;
+    color: #E4C59E;
+}
+
+.message-text {
+    font-size: 1.2rem;
+    color: #E4C59E;
+}
+
+.close-modal {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #E4C59E;
+    color: #2D2D2D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.close-modal:hover {
+    background: #d2b28d;
+}
+
+/* ============================================= */
+/* Responsiveness for Android (small screens) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .login-card {
+        width: 100%; 
+        max-width: 400px;
+        padding: 24px;
+        gap: 16px;
+    }
+
+    .logo img {
+        width: 60px; 
+    }
+
+    .input-container input {
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
